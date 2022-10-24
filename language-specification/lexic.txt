@@ -9,7 +9,7 @@ Lexic:
 a. Special symbols, representing:
 - operators + - * / % = < <= == > >= != !, and, or
 - separators () [] {}  : ; space ,
-- reserved words: let, int, string, char, array, const, input, output, check, else, loop
+- reserved words: let, int, string, char, array, const, input, output, check, else, loop, while
 
 b. Identifiers:
 - a sequence of letters and digits, such that the first character is a letter; the rule is:
