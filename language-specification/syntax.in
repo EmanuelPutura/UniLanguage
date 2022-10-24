@@ -1,50 +1,50 @@
 2. Syntax:
 - The words - predefined tokens are specified between " and ". Sintactical rules: (file Syntax.in):
 
-program := "${" {decllist | stmtlist} "}"
+program = "${" {decllist | stmtlist} "}"
 
-decllist := declaration {declaration}
+decllist = declaration {declaration}
 
-declaration := noconstdeclaration | "const" noconstdeclaration
+declaration = noconstdeclaration | "const" noconstdeclaration
 
-noconstdeclaration := "let" IDENTIFIER ((":" type1) | ("=" expression) | ("=" arraydecl)) ";"
+noconstdeclaration = "let" IDENTIFIER ((":" type1) | ("=" expression) | ("=" arraydecl)) ";"
 
-consttype := "const" type1
+consttype = "const" type1
 
-simpletype := "bool" | "char" | "string" | "int" | "array"
+simpletype = "bool" | "char" | "string" | "int" | "array"
 
-arraydecl := array "[" nr "]" "of" type1 ";"
+arraydecl = array "[" nr "]" "of" type1 ";"
 
-type  := simpletype | arraydecl
+type = simpletype | arraydecl
 
-cmpdstmt := "{" stmtlist "}"
+cmpdstmt = "{" stmtlist "}"
 
-stmtlist := stmt {stmt}
+stmtlist = stmt {stmt}
 
-stmt := simplstmt | structstmt
+stmt = simplstmt | structstmt
 
-simplstmt := assignstmt | iostmt
+simplstmt = assignstmt | iostmt
 
-assignstmt := IDENTIFIER "=" expression ";"
+assignstmt = IDENTIFIER "=" expression ";"
 
-expression := expression "+" term | expression "-" term | term
+expression = expression "+" term | expression "-" term | term
 
-term := term "*" factor | term "/" factor | term "%" factor | factor
+term = term "*" factor | term "/" factor | term "%" factor | factor
 
-factor := "(" expression ")" | IDENTIFIER | constant
+factor = "(" expression ")" | IDENTIFIER | constant
 
-constant := number | character | string
+constant = number | character | string
 
-iostmt := (("input" | "output") "(" IDENTIFIER ")" ";") | ("output" "(" (string | number) ")" ";")
+iostmt = (("input" | "output") "(" IDENTIFIER ")" ";") | ("output" "(" (string | number) ")" ";")
 
-structstmt := cmpdstmt | ifstmt | whilestmt | forstmp
+structstmt = cmpdstmt | ifstmt | whilestmt | forstmp
 
-ifstmt := "check" "(" condition ")" "{" stmt "}" ["else check" condition "{" stmt "}"] ["else" "{" stmt "}"]
+ifstmt = "check" "(" condition ")" "{" stmt "}" ["else check" condition "{" stmt "}"] ["else" "{" stmt "}"]
 
-forstmp := "loop" "(" "let" IDENTIFIER "=" expression ";" condition ";" assignstmt ")" cmpdstmt
+forstmp = "loop" "(" "let" IDENTIFIER "=" expression ";" condition ";" assignstmt ")" cmpdstmt
 
-whilestmt := "WHILE" condition "DO" cmpdstmt
+whilestmt = "WHILE" condition "DO" cmpdstmt
 
-condition := expression RELATION expression
+condition = expression RELATION expression
 
-RELATION := "<" | "<=" | "=" | "<>" | ">=" | ">"
+RELATION = "<" | "<=" | "=" | "<>" | ">=" | ">"
