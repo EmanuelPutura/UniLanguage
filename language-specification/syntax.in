@@ -1,0 +1,50 @@
+2. Syntax:
+- The words - predefined tokens are specified between " and ". Sintactical rules: (file Syntax.in):
+
+program = "${" {decllist | stmtlist} "}"
+
+decllist = declaration {declaration}
+
+declaration = noconstdeclaration | "const" noconstdeclaration
+
+noconstdeclaration = "let" IDENTIFIER ((":" simpletype) | ("=" expression) | ("=" arraydecl)) ";"
+
+consttype = "const" type
+
+simpletype = "bool" | "char" | "string" | "int" | "array"
+
+arraydecl = array "[" nr "]" "of" simpletype ";"
+
+type = simpletype | arraydecl
+
+cmpdstmt = "{" stmtlist "}"
+
+stmtlist = stmt {stmt}
+
+stmt = simplstmt | structstmt
+
+simplstmt = assignstmt | iostmt
+
+assignstmt = IDENTIFIER "=" expression ";"
+
+expression = expression "+" term | expression "-" term | term
+
+term = term "*" factor | term "/" factor | term "%" factor | factor
+
+factor = "(" expression ")" | IDENTIFIER | constant
+
+constant = number | character | string
+
+iostmt = (("input" | "output") "(" IDENTIFIER ")" ";") | ("output" "(" (string | number) ")" ";")
+
+structstmt = cmpdstmt | ifstmt | whilestmt | forstmp
+
+ifstmt = "check" "(" condition ")" "{" stmt "}" ["else check" "(" condition ")" "{" stmt "}"] ["else" "{" stmt "}"]
+
+forstmp = "loop" "(" "let" IDENTIFIER "=" expression ";" condition ";" assignstmt ")" cmpdstmt
+
+whilestmt = "WHILE" condition "DO" cmpdstmt
+
+condition = expression RELATION expression
+
+RELATION = "<" | "<=" | "=" | "<>" | ">=" | ">"
