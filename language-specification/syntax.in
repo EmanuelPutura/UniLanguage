@@ -7,13 +7,13 @@ decllist = declaration {declaration}
 
 declaration = noconstdeclaration | "const" noconstdeclaration
 
-noconstdeclaration = "let" IDENTIFIER ((":" type1) | ("=" expression) | ("=" arraydecl)) ";"
+noconstdeclaration = "let" IDENTIFIER ((":" simpletype) | ("=" expression) | ("=" arraydecl)) ";"
 
-consttype = "const" type1
+consttype = "const" type
 
 simpletype = "bool" | "char" | "string" | "int" | "array"
 
-arraydecl = array "[" nr "]" "of" type1 ";"
+arraydecl = array "[" nr "]" "of" simpletype ";"
 
 type = simpletype | arraydecl
 
@@ -39,7 +39,7 @@ iostmt = (("input" | "output") "(" IDENTIFIER ")" ";") | ("output" "(" (string |
 
 structstmt = cmpdstmt | ifstmt | whilestmt | forstmp
 
-ifstmt = "check" "(" condition ")" "{" stmt "}" ["else check" condition "{" stmt "}"] ["else" "{" stmt "}"]
+ifstmt = "check" "(" condition ")" "{" stmt "}" ["else check" "(" condition ")" "{" stmt "}"] ["else" "{" stmt "}"]
 
 forstmp = "loop" "(" "let" IDENTIFIER "=" expression ";" condition ";" assignstmt ")" cmpdstmt
 
