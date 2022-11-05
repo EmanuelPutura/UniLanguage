@@ -5,16 +5,20 @@ CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/RedBlackTree.cpp.o: ../SymbolTa
 CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/RedBlackTree.cpp.o: ../SymbolTable/RedBlackTree/RedBlackTree.cpp
 CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/RedBlackTree.cpp.o: ../SymbolTable/RedBlackTree/RedBlackTree.h
 
-CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/rbt_testing.cpp.o: ../SymbolTable/RedBlackTree/Node.h
-CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/rbt_testing.cpp.o: ../SymbolTable/RedBlackTree/RedBlackTree.h
-CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/rbt_testing.cpp.o: ../SymbolTable/RedBlackTree/rbt_testing.cpp
-CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/rbt_testing.cpp.o: ../SymbolTable/RedBlackTree/rbt_testing.h
-
 CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o: ../SymbolTable/RedBlackTree/Node.h
 CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o: ../SymbolTable/RedBlackTree/RedBlackTree.h
 CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o: ../SymbolTable/SymbolTable.cpp
 CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o: ../SymbolTable/SymbolTable.h
 
-CMakeFiles/Compiler.dir/main.cpp.o: ../SymbolTable/RedBlackTree/rbt_testing.h
+CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o: ../SymbolTable/RedBlackTree/Node.h
+CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o: ../SymbolTable/RedBlackTree/RedBlackTree.h
+CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o: ../SymbolTable/SymbolTable.h
+CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o: ../SymbolTable/Tests/SymbolTableTest.cpp
+CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o: ../SymbolTable/Tests/SymbolTableTest.h
+
+CMakeFiles/Compiler.dir/main.cpp.o: ../SymbolTable/RedBlackTree/Node.h
+CMakeFiles/Compiler.dir/main.cpp.o: ../SymbolTable/RedBlackTree/RedBlackTree.h
+CMakeFiles/Compiler.dir/main.cpp.o: ../SymbolTable/SymbolTable.h
+CMakeFiles/Compiler.dir/main.cpp.o: ../SymbolTable/Tests/SymbolTableTest.h
 CMakeFiles/Compiler.dir/main.cpp.o: ../main.cpp
 

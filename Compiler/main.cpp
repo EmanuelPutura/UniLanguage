@@ -1,7 +1,7 @@
-#include "SymbolTable/RedBlackTree/rbt_testing.h"
+#include "SymbolTable/Tests/SymbolTableTest.h"
 
 int main() {
-    testRedBlackTree();
+    SymbolTableTest::symbolTableTest();
 
     return 0;
 }

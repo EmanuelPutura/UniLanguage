@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/Informatica/University/Compiler
+CMAKE_SOURCE_DIR = /mnt/d/Informatica/University/UniLanguage/Compiler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/Informatica/University/Compiler/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Informatica/University/Compiler/cmake-build-debug/CMakeFiles /mnt/d/Informatica/University/Compiler/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles /mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Informatica/University/Compiler/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,33 +150,6 @@ SymbolTable/RedBlackTree/RedBlackTree.cpp.s:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/RedBlackTree.cpp.s
 .PHONY : SymbolTable/RedBlackTree/RedBlackTree.cpp.s
 
-SymbolTable/RedBlackTree/rbt_testing.o: SymbolTable/RedBlackTree/rbt_testing.cpp.o
-
-.PHONY : SymbolTable/RedBlackTree/rbt_testing.o
-
-# target to build an object file
-SymbolTable/RedBlackTree/rbt_testing.cpp.o:
-	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/rbt_testing.cpp.o
-.PHONY : SymbolTable/RedBlackTree/rbt_testing.cpp.o
-
-SymbolTable/RedBlackTree/rbt_testing.i: SymbolTable/RedBlackTree/rbt_testing.cpp.i
-
-.PHONY : SymbolTable/RedBlackTree/rbt_testing.i
-
-# target to preprocess a source file
-SymbolTable/RedBlackTree/rbt_testing.cpp.i:
-	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/rbt_testing.cpp.i
-.PHONY : SymbolTable/RedBlackTree/rbt_testing.cpp.i
-
-SymbolTable/RedBlackTree/rbt_testing.s: SymbolTable/RedBlackTree/rbt_testing.cpp.s
-
-.PHONY : SymbolTable/RedBlackTree/rbt_testing.s
-
-# target to generate assembly for a file
-SymbolTable/RedBlackTree/rbt_testing.cpp.s:
-	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/rbt_testing.cpp.s
-.PHONY : SymbolTable/RedBlackTree/rbt_testing.cpp.s
-
 SymbolTable/SymbolTable.o: SymbolTable/SymbolTable.cpp.o
 
 .PHONY : SymbolTable/SymbolTable.o
@@ -203,6 +176,33 @@ SymbolTable/SymbolTable.s: SymbolTable/SymbolTable.cpp.s
 SymbolTable/SymbolTable.cpp.s:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.s
 .PHONY : SymbolTable/SymbolTable.cpp.s
+
+SymbolTable/Tests/SymbolTableTest.o: SymbolTable/Tests/SymbolTableTest.cpp.o
+
+.PHONY : SymbolTable/Tests/SymbolTableTest.o
+
+# target to build an object file
+SymbolTable/Tests/SymbolTableTest.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o
+.PHONY : SymbolTable/Tests/SymbolTableTest.cpp.o
+
+SymbolTable/Tests/SymbolTableTest.i: SymbolTable/Tests/SymbolTableTest.cpp.i
+
+.PHONY : SymbolTable/Tests/SymbolTableTest.i
+
+# target to preprocess a source file
+SymbolTable/Tests/SymbolTableTest.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.i
+.PHONY : SymbolTable/Tests/SymbolTableTest.cpp.i
+
+SymbolTable/Tests/SymbolTableTest.s: SymbolTable/Tests/SymbolTableTest.cpp.s
+
+.PHONY : SymbolTable/Tests/SymbolTableTest.s
+
+# target to generate assembly for a file
+SymbolTable/Tests/SymbolTableTest.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.s
+.PHONY : SymbolTable/Tests/SymbolTableTest.cpp.s
 
 main.o: main.cpp.o
 
@@ -243,12 +243,12 @@ help:
 	@echo "... SymbolTable/RedBlackTree/RedBlackTree.o"
 	@echo "... SymbolTable/RedBlackTree/RedBlackTree.i"
 	@echo "... SymbolTable/RedBlackTree/RedBlackTree.s"
-	@echo "... SymbolTable/RedBlackTree/rbt_testing.o"
-	@echo "... SymbolTable/RedBlackTree/rbt_testing.i"
-	@echo "... SymbolTable/RedBlackTree/rbt_testing.s"
 	@echo "... SymbolTable/SymbolTable.o"
 	@echo "... SymbolTable/SymbolTable.i"
 	@echo "... SymbolTable/SymbolTable.s"
+	@echo "... SymbolTable/Tests/SymbolTableTest.o"
+	@echo "... SymbolTable/Tests/SymbolTableTest.i"
+	@echo "... SymbolTable/Tests/SymbolTableTest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

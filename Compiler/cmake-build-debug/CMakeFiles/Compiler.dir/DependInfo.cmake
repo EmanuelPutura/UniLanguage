@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/d/Informatica/University/Compiler/SymbolTable/RedBlackTree/RedBlackTree.cpp" "/mnt/d/Informatica/University/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/RedBlackTree.cpp.o"
-  "/mnt/d/Informatica/University/Compiler/SymbolTable/RedBlackTree/rbt_testing.cpp" "/mnt/d/Informatica/University/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/rbt_testing.cpp.o"
-  "/mnt/d/Informatica/University/Compiler/SymbolTable/SymbolTable.cpp" "/mnt/d/Informatica/University/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o"
-  "/mnt/d/Informatica/University/Compiler/main.cpp" "/mnt/d/Informatica/University/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/main.cpp.o"
+  "/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/RedBlackTree/RedBlackTree.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/RedBlackTree.cpp.o"
+  "/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/SymbolTable.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o"
+  "/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/Tests/SymbolTableTest.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o"
+  "/mnt/d/Informatica/University/UniLanguage/Compiler/main.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -33,6 +33,7 @@ public:
     RedBlackTree();
     ~RedBlackTree();
 
+protected:
     void inorderTraversal(std::ostream& os) const;
     virtual void insert(const K& key);
     virtual void remove(const K& key);
@@ -43,7 +44,7 @@ public:
 
     int size() const;
     Node* root() const;
-protected:
+
     virtual void initNode(Node* &node, const K& key) const;
     void recursiveInorderTraversal(Node *subtree_root, std::ostream& os) const;
     void deleteRecursively(Node *subtree_root);

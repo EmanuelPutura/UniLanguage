@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/RedBlackTree.cpp.o"
-  "CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/rbt_testing.cpp.o"
   "CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o"
+  "CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o"
   "CMakeFiles/Compiler.dir/main.cpp.o"
   "Compiler"
   "Compiler.pdb"
