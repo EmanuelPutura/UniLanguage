@@ -4,7 +4,7 @@
 int main() {
     SymbolTableTest::symbolTableTest();
 
-    Scanner scanner ("../Files/Programs/p3.txt", "../Files/LanguageSpecification/tokens.in");
+    Scanner scanner ("../Files/Programs/p_err1.txt", "../Files/LanguageSpecification/tokens.in");
     scanner.scan();
 
     return 0;
