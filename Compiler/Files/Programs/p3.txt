@@ -1,0 +1,14 @@
+$
+    let sum = 0;
+    let currentNumber: int;
+
+    let n: int;
+    input(n);
+
+    loop(let i = 0; i<n; i=i+1) {
+        input(currentNumber);
+        sum = sum + currentNumber;
+    }
+
+    output(sum);
+$

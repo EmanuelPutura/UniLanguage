@@ -4,6 +4,8 @@
 
 #include "SymbolTable.h"
 
+#include <fstream>
+
 int SymbolTable::retrievePosition(const std::string &element) {
     auto node = search(SymbolTableEntry(element));
 
@@ -13,4 +15,18 @@ int SymbolTable::retrievePosition(const std::string &element) {
     }
 
     return node->getKey().index;
+}
+
+void SymbolTable::getSymbolTableInFile() const {
+    std::ofstream fout (outFilePath);
+
+    fout << "Data Structure: Balanced binary search tree, implemented using a red-black tree\n";
+    fout << *this << '\n';
+
+    fout.close();
+}
+
+std::ostream &operator<<(std::ostream &out, const SymbolTable &st) {
+    st.recursiveInorderTraversal(st.tree_root, out);
+    return out;
 }

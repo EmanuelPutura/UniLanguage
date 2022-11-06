@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/Scanner/Scanner.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/Scanner/Scanner.h">
+			<Option target="Compiler"/>
+		</Unit>
 		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/RedBlackTree/Node.h">
 			<Option target="Compiler"/>
 		</Unit>

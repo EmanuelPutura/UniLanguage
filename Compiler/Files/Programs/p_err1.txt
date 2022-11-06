@@ -1,0 +1,22 @@
+$
+    let a: 1int;
+    input(a);
+
+    let b: int;
+    input(b);
+
+    let c: int;
+    input(c);
+
+    let max = a;
+
+    check(b ~ a) {
+        max = b;
+    }
+
+    check(c > max) {
+        max = c;
+    }
+
+    output(max);
+$

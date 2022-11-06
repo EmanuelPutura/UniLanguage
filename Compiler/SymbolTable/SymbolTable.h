@@ -29,15 +29,25 @@ struct SymbolTableEntry {
     friend bool operator!= (const SymbolTableEntry& e1, const SymbolTableEntry& e2) {
         return e1.symbol != e2.symbol;
     }
+
+    friend std::ostream& operator<< (std::ostream& out, const SymbolTableEntry& entry) {
+        out << entry.symbol << " -> " << entry.index << '\n';
+        return out;
+    }
 };
 
 class SymbolTable : public RedBlackTree<SymbolTableEntry, Node<SymbolTableEntry>> {
 private:
     size_t currentIndex;
+    std::string outFilePath;
 public:
-    SymbolTable() : currentIndex(0), RedBlackTree<SymbolTableEntry, Node<SymbolTableEntry>>() {}
+    SymbolTable(const std::string& outFilePath) : currentIndex(0), outFilePath(outFilePath), RedBlackTree<SymbolTableEntry, Node<SymbolTableEntry>>() {}
 
     int retrievePosition(const std::string& element);
+
+    void getSymbolTableInFile() const;
+
+    friend std::ostream& operator<< (std::ostream& out, const SymbolTable& st);
 };
 
 

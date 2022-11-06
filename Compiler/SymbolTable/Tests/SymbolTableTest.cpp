@@ -10,7 +10,7 @@ void SymbolTableTest::symbolTableTest() {
             {"S2", 2}, {"S4", 4}, {"S1", 1}
     };
 
-    SymbolTable st;
+    SymbolTable st ("");
 
     for (size_t i = 0; i < testData.size(); ++i) {
         assert(st.retrievePosition(testData[i].first) == testData[i].second);

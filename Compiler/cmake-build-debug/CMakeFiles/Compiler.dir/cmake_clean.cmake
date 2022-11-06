@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.o"
+  "CMakeFiles/Compiler.dir/Scanner/Scanner.cpp.o"
   "CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/RedBlackTree.cpp.o"
   "CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o"
   "CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o"

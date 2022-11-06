@@ -4,4 +4,4 @@ project(Compiler)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Compiler main.cpp SymbolTable/RedBlackTree/RedBlackTree.cpp SymbolTable/RedBlackTree/RedBlackTree.h SymbolTable/RedBlackTree/Node.h
-        SymbolTable/SymbolTable.cpp SymbolTable/SymbolTable.h SymbolTable/Tests/SymbolTableTest.cpp SymbolTable/Tests/SymbolTableTest.h)
+        SymbolTable/SymbolTable.cpp SymbolTable/SymbolTable.h SymbolTable/Tests/SymbolTableTest.cpp SymbolTable/Tests/SymbolTableTest.h Scanner/Scanner.cpp Scanner/Scanner.h ProgramInternalForm/ProgramInternalForm.cpp ProgramInternalForm/ProgramInternalForm.h)

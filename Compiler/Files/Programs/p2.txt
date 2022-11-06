@@ -1,0 +1,31 @@
+$
+    let number: int;
+    input(number);
+
+    let primeAnswer = "Prime";
+    let nonPrimeAnswer = "NonPrime";
+
+    check(number < 2) {
+        output(nonPrimeAnswer);
+        exit;
+    }
+
+    check(number == 2) {
+        output(primeAnswer);
+        exit;
+    }
+
+    check(number % 2 == 0) {
+        output(nonPrimeAnswer);
+        exit;
+    }
+
+    loop(let d = 3; d * d <= number; d = d + 2) {
+        check (number % d == 0) {
+            output(nonPrimeAnswer);
+            exit;
+        }
+    }
+
+    output(primeAnswer);
+$

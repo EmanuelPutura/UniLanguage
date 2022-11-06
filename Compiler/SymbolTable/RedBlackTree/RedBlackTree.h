@@ -131,7 +131,7 @@ template <class K, class Node>
 void RedBlackTree<K, Node>::recursiveInorderTraversal(Node *subtree_root, std::ostream& os) const {
     if (subtree_root != nil) {
         recursiveInorderTraversal(subtree_root->left, os);
-        os << subtree_root->key << ' ';
+        os << subtree_root->key;
         recursiveInorderTraversal(subtree_root->right, os);
     }
 }

@@ -123,6 +123,60 @@ Compiler/fast:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/build
 .PHONY : Compiler/fast
 
+ProgramInternalForm/ProgramInternalForm.o: ProgramInternalForm/ProgramInternalForm.cpp.o
+
+.PHONY : ProgramInternalForm/ProgramInternalForm.o
+
+# target to build an object file
+ProgramInternalForm/ProgramInternalForm.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.o
+.PHONY : ProgramInternalForm/ProgramInternalForm.cpp.o
+
+ProgramInternalForm/ProgramInternalForm.i: ProgramInternalForm/ProgramInternalForm.cpp.i
+
+.PHONY : ProgramInternalForm/ProgramInternalForm.i
+
+# target to preprocess a source file
+ProgramInternalForm/ProgramInternalForm.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.i
+.PHONY : ProgramInternalForm/ProgramInternalForm.cpp.i
+
+ProgramInternalForm/ProgramInternalForm.s: ProgramInternalForm/ProgramInternalForm.cpp.s
+
+.PHONY : ProgramInternalForm/ProgramInternalForm.s
+
+# target to generate assembly for a file
+ProgramInternalForm/ProgramInternalForm.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.s
+.PHONY : ProgramInternalForm/ProgramInternalForm.cpp.s
+
+Scanner/Scanner.o: Scanner/Scanner.cpp.o
+
+.PHONY : Scanner/Scanner.o
+
+# target to build an object file
+Scanner/Scanner.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/Scanner/Scanner.cpp.o
+.PHONY : Scanner/Scanner.cpp.o
+
+Scanner/Scanner.i: Scanner/Scanner.cpp.i
+
+.PHONY : Scanner/Scanner.i
+
+# target to preprocess a source file
+Scanner/Scanner.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/Scanner/Scanner.cpp.i
+.PHONY : Scanner/Scanner.cpp.i
+
+Scanner/Scanner.s: Scanner/Scanner.cpp.s
+
+.PHONY : Scanner/Scanner.s
+
+# target to generate assembly for a file
+Scanner/Scanner.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/Scanner/Scanner.cpp.s
+.PHONY : Scanner/Scanner.cpp.s
+
 SymbolTable/RedBlackTree/RedBlackTree.o: SymbolTable/RedBlackTree/RedBlackTree.cpp.o
 
 .PHONY : SymbolTable/RedBlackTree/RedBlackTree.o
@@ -240,6 +294,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Compiler"
+	@echo "... ProgramInternalForm/ProgramInternalForm.o"
+	@echo "... ProgramInternalForm/ProgramInternalForm.i"
+	@echo "... ProgramInternalForm/ProgramInternalForm.s"
+	@echo "... Scanner/Scanner.o"
+	@echo "... Scanner/Scanner.i"
+	@echo "... Scanner/Scanner.s"
 	@echo "... SymbolTable/RedBlackTree/RedBlackTree.o"
 	@echo "... SymbolTable/RedBlackTree/RedBlackTree.i"
 	@echo "... SymbolTable/RedBlackTree/RedBlackTree.s"
