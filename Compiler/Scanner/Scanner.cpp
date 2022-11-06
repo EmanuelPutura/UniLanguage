@@ -179,7 +179,9 @@ void Scanner::handleToken(std::string token, int lineNumber) {
     }
     else {
         int index = symbolTable.retrievePosition(token);
-        pif.push(token, index);
+        std::string type = tokenType == IDENTIFIER ? "id" : "const";
+
+        pif.push(type, index);
     }
 }
 
