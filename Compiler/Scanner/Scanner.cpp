@@ -43,6 +43,7 @@ Scanner::Scanner(const std::string &inputFilePath, const std::string &tokensFile
 void Scanner::scanTokens() {
     std::ifstream fin(inputFilePath);
     std::string separatorsRegex = buildOrRegex(separators);
+
     std::string line;
     std::string word;
 

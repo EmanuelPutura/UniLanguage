@@ -1,7 +1,7 @@
 2. Syntax:
 - The words - predefined tokens are specified between " and ". Sintactical rules: (file Syntax.in):
 
-program = "${" {decllist | stmtlist} "}"
+program = "$" {decllist | stmtlist} "$"
 
 decllist = declaration {declaration}
 
