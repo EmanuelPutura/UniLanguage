@@ -4,6 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.o"
+  "/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.o"
+  "/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Utils/UtilFunctions.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.o"
   "/mnt/d/Informatica/University/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.o"
   "/mnt/d/Informatica/University/UniLanguage/Compiler/Scanner/Scanner.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/Scanner/Scanner.cpp.o"
   "/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/RedBlackTree/RedBlackTree.cpp" "/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/SymbolTable/RedBlackTree/RedBlackTree.cpp.o"

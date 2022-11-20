@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.h
+set
+-
+string
+-
+Transition/Transition.h
+/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.h
+
+/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.h
+string
+-
+
 /mnt/d/Informatica/University/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.h
 vector
 -
@@ -17,6 +29,8 @@ string
 /mnt/d/Informatica/University/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.h
 ../SymbolTable/SymbolTable.h
 /mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/SymbolTable.h
+../FiniteAutomata/FiniteAutomata.h
+/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.h
 unordered_set
 -
 
@@ -53,4 +67,6 @@ SymbolTable/Tests/SymbolTableTest.h
 /mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/Tests/SymbolTableTest.h
 Scanner/Scanner.h
 /mnt/d/Informatica/University/UniLanguage/Compiler/Scanner/Scanner.h
+FiniteAutomata/FiniteAutomata.h
+/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.h
 

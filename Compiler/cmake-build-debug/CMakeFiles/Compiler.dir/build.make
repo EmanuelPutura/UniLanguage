@@ -135,6 +135,45 @@ CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.s: cmake_for
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Informatica/University/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.cpp -o CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.s
 
+CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.o: ../FiniteAutomata/Transition/Transition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.o -c /mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.cpp
+
+CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.cpp > CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.i
+
+CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.cpp -o CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.s
+
+CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.o: ../FiniteAutomata/FiniteAutomata.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.o -c /mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.cpp
+
+CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.cpp > CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.i
+
+CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.cpp -o CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.s
+
+CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.o: ../FiniteAutomata/Utils/UtilFunctions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.o -c /mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Utils/UtilFunctions.cpp
+
+CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Utils/UtilFunctions.cpp > CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.i
+
+CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Utils/UtilFunctions.cpp -o CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.s
+
 # Object files for target Compiler
 Compiler_OBJECTS = \
 "CMakeFiles/Compiler.dir/main.cpp.o" \
@@ -142,7 +181,10 @@ Compiler_OBJECTS = \
 "CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o" \
 "CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o" \
 "CMakeFiles/Compiler.dir/Scanner/Scanner.cpp.o" \
-"CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.o"
+"CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.o" \
+"CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.o" \
+"CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.o" \
+"CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.o"
 
 # External object files for target Compiler
 Compiler_EXTERNAL_OBJECTS =
@@ -153,9 +195,12 @@ Compiler: CMakeFiles/Compiler.dir/SymbolTable/SymbolTable.cpp.o
 Compiler: CMakeFiles/Compiler.dir/SymbolTable/Tests/SymbolTableTest.cpp.o
 Compiler: CMakeFiles/Compiler.dir/Scanner/Scanner.cpp.o
 Compiler: CMakeFiles/Compiler.dir/ProgramInternalForm/ProgramInternalForm.cpp.o
+Compiler: CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.o
+Compiler: CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.o
+Compiler: CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.o
 Compiler: CMakeFiles/Compiler.dir/build.make
 Compiler: CMakeFiles/Compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

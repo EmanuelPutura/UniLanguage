@@ -82,6 +82,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Utils/UtilFunctions.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Utils/UtilFunctions.h">
+			<Option target="Compiler"/>
+		</Unit>
 		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.cpp">
 			<Option target="Compiler"/>
 		</Unit>

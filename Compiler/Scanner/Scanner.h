@@ -7,6 +7,7 @@
 
 #include "../ProgramInternalForm/ProgramInternalForm.h"
 #include "../SymbolTable/SymbolTable.h"
+#include "../FiniteAutomata/FiniteAutomata.h"
 
 #include <unordered_set>
 
@@ -29,6 +30,9 @@ enum TokenType {
 
 class Scanner {
 private:
+    FiniteAutomata finiteAutomataIntegers;
+    FiniteAutomata finiteAutomataIdentifiers;
+
     ProgramInternalForm pif;
     SymbolTable symbolTable;
 

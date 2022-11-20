@@ -123,6 +123,87 @@ Compiler/fast:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/build
 .PHONY : Compiler/fast
 
+FiniteAutomata/FiniteAutomata.o: FiniteAutomata/FiniteAutomata.cpp.o
+
+.PHONY : FiniteAutomata/FiniteAutomata.o
+
+# target to build an object file
+FiniteAutomata/FiniteAutomata.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.o
+.PHONY : FiniteAutomata/FiniteAutomata.cpp.o
+
+FiniteAutomata/FiniteAutomata.i: FiniteAutomata/FiniteAutomata.cpp.i
+
+.PHONY : FiniteAutomata/FiniteAutomata.i
+
+# target to preprocess a source file
+FiniteAutomata/FiniteAutomata.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.i
+.PHONY : FiniteAutomata/FiniteAutomata.cpp.i
+
+FiniteAutomata/FiniteAutomata.s: FiniteAutomata/FiniteAutomata.cpp.s
+
+.PHONY : FiniteAutomata/FiniteAutomata.s
+
+# target to generate assembly for a file
+FiniteAutomata/FiniteAutomata.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/FiniteAutomata/FiniteAutomata.cpp.s
+.PHONY : FiniteAutomata/FiniteAutomata.cpp.s
+
+FiniteAutomata/Transition/Transition.o: FiniteAutomata/Transition/Transition.cpp.o
+
+.PHONY : FiniteAutomata/Transition/Transition.o
+
+# target to build an object file
+FiniteAutomata/Transition/Transition.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.o
+.PHONY : FiniteAutomata/Transition/Transition.cpp.o
+
+FiniteAutomata/Transition/Transition.i: FiniteAutomata/Transition/Transition.cpp.i
+
+.PHONY : FiniteAutomata/Transition/Transition.i
+
+# target to preprocess a source file
+FiniteAutomata/Transition/Transition.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.i
+.PHONY : FiniteAutomata/Transition/Transition.cpp.i
+
+FiniteAutomata/Transition/Transition.s: FiniteAutomata/Transition/Transition.cpp.s
+
+.PHONY : FiniteAutomata/Transition/Transition.s
+
+# target to generate assembly for a file
+FiniteAutomata/Transition/Transition.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/FiniteAutomata/Transition/Transition.cpp.s
+.PHONY : FiniteAutomata/Transition/Transition.cpp.s
+
+FiniteAutomata/Utils/UtilFunctions.o: FiniteAutomata/Utils/UtilFunctions.cpp.o
+
+.PHONY : FiniteAutomata/Utils/UtilFunctions.o
+
+# target to build an object file
+FiniteAutomata/Utils/UtilFunctions.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.o
+.PHONY : FiniteAutomata/Utils/UtilFunctions.cpp.o
+
+FiniteAutomata/Utils/UtilFunctions.i: FiniteAutomata/Utils/UtilFunctions.cpp.i
+
+.PHONY : FiniteAutomata/Utils/UtilFunctions.i
+
+# target to preprocess a source file
+FiniteAutomata/Utils/UtilFunctions.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.i
+.PHONY : FiniteAutomata/Utils/UtilFunctions.cpp.i
+
+FiniteAutomata/Utils/UtilFunctions.s: FiniteAutomata/Utils/UtilFunctions.cpp.s
+
+.PHONY : FiniteAutomata/Utils/UtilFunctions.s
+
+# target to generate assembly for a file
+FiniteAutomata/Utils/UtilFunctions.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/FiniteAutomata/Utils/UtilFunctions.cpp.s
+.PHONY : FiniteAutomata/Utils/UtilFunctions.cpp.s
+
 ProgramInternalForm/ProgramInternalForm.o: ProgramInternalForm/ProgramInternalForm.cpp.o
 
 .PHONY : ProgramInternalForm/ProgramInternalForm.o
@@ -294,6 +375,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Compiler"
+	@echo "... FiniteAutomata/FiniteAutomata.o"
+	@echo "... FiniteAutomata/FiniteAutomata.i"
+	@echo "... FiniteAutomata/FiniteAutomata.s"
+	@echo "... FiniteAutomata/Transition/Transition.o"
+	@echo "... FiniteAutomata/Transition/Transition.i"
+	@echo "... FiniteAutomata/Transition/Transition.s"
+	@echo "... FiniteAutomata/Utils/UtilFunctions.o"
+	@echo "... FiniteAutomata/Utils/UtilFunctions.i"
+	@echo "... FiniteAutomata/Utils/UtilFunctions.s"
 	@echo "... ProgramInternalForm/ProgramInternalForm.o"
 	@echo "... ProgramInternalForm/ProgramInternalForm.i"
 	@echo "... ProgramInternalForm/ProgramInternalForm.s"

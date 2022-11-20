@@ -38,6 +38,9 @@ Scanner::Scanner(const std::string &inputFilePath, const std::string &tokensFile
     }
 
     fin.close();
+
+    finiteAutomataIntegers.parse("../Files/FiniteAutomata/FA_integers.in");
+    finiteAutomataIdentifiers.parse("../Files/FiniteAutomata/FA_identifiers.in");
 }
 
 void Scanner::scanTokens() {
@@ -200,9 +203,14 @@ TokenType Scanner::identifyToken(const std::string &token, int lineNumber) const
     }
 
     std::regex identifierRegex ("^([a-zA-Z])[a-zA-Z0-9]*$");
-    if (std::regex_match(token, identifierRegex)) {
+
+//    if (std::regex_match(token, identifierRegex)) {
+//        return IDENTIFIER;
+//    }
+    if (finiteAutomataIdentifiers.check(token)) {
         return IDENTIFIER;
     }
+
 
     std::regex negativeIntegerConstRegex ("^\\-[1-9][0-9]*$");
     std::regex positiveIntegerConstRegex ("^\\+[1-9][0-9]*$");
@@ -211,8 +219,12 @@ TokenType Scanner::identifyToken(const std::string &token, int lineNumber) const
     std::regex characterConstRegex("^\'[a-zA-Z0-9]?\'$");
     std::regex stringConstRegex("^\"[a-zA-Z0-9]*\"$");
 
-    if (std::regex_match(token, negativeIntegerConstRegex) || std::regex_match(token, positiveIntegerConstRegex) || std::regex_match(token, integerConstRegex) ||
-            std::regex_match(token, characterConstRegex) || std::regex_match(token, stringConstRegex)) {
+//    if (std::regex_match(token, negativeIntegerConstRegex) || std::regex_match(token, positiveIntegerConstRegex) || std::regex_match(token, integerConstRegex) ||
+//            std::regex_match(token, characterConstRegex) || std::regex_match(token, stringConstRegex)) {
+//        return CONSTANT;
+//    }
+
+    if (finiteAutomataIntegers.check(token) || std::regex_match(token, characterConstRegex) || std::regex_match(token, stringConstRegex)) {
         return CONSTANT;
     }
 
