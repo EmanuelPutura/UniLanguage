@@ -3,7 +3,7 @@
 //
 
 #include "Transition.h"
-#include "../Utils/UtilFunctions.h"
+#include "../../Utils/UtilFunctions.h"
 
 Transition::Transition(const std::string &source, const std::string &symbol, const std::string &destination) :
         source(source), destination(destination), symbol(symbol) {}
