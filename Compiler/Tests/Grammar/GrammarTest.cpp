@@ -32,7 +32,7 @@ void GrammarTest::test() {
                 return;
             case 1:
                 std::cout << "Non-terminals:\n";
-                for (const auto& element: grammar.getNonterminals()) {
+                for (const auto& element: grammar.getNonTerminals()) {
                     std::cout << element << '\n';
                 }
                 std::cout << '\n';
@@ -47,7 +47,7 @@ void GrammarTest::test() {
             case 3:
                 std::cout << "Productions:\n";
                 for (const auto& element: grammar.getProductions()) {
-                    std::cout << element.getString() << '\n';
+                    std::cout << element.toString() << '\n';
                 }
                 std::cout << '\n';
                 break;

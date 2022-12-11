@@ -7,7 +7,7 @@ Production::Production(const std::string &source, const std::vector<std::string>
         destinations{destinations} {
 }
 
-std::string Production::getString() const {
+std::string Production::toString() const {
     std::string res = source + " -> ";
 
     for (auto destination: destinations) {
@@ -31,5 +31,5 @@ __attribute__((unused)) const std::vector<std::string> &Production::getDestinati
 }
 
 bool operator<(const Production &el, const Production &other) {
-    return el.getString() < other.getString();
+    return el.toString() < other.toString();
 }
