@@ -31,26 +31,26 @@ void Grammar::parse(const std::string &file_path) {
     std::string line;
 
     while (std::getline(in, line)) {
-        if (line.size() > 0 && line[0] == 'N') {
+        if (!line.empty() && line[0] == 'N') {
             while (std::getline(in, line)) {
                 line = trim(line);
 
-                if (line.size() == 0)
+                if (line.empty())
                     break;
 
                 if (line[line.size() - 1] == ',') {
                     line.pop_back();
                 }
 
-                nonterminals.push_back(line);
+                nonTerminals.push_back(line);
             }
         }
 
-        if (line.size() > 0 && line[0] == 'T') {
+        if (!line.empty() && line[0] == 'T') {
             while (std::getline(in, line)) {
                 line = trim(line);
 
-                if (line.size() == 0)
+                if (line.empty())
                     break;
 
                 if (line[line.size() - 1] == ',') {
@@ -61,11 +61,11 @@ void Grammar::parse(const std::string &file_path) {
             }
         }
 
-        if (line.size() > 0 && line[0] == 'P') {
+        if (!line.empty() && line[0] == 'P') {
             while (std::getline(in, line)) {
                 line = trim(line);
 
-                if (line.size() == 0)
+                if (line.empty())
                     break;
 
                 if (line[line.size() - 1] == ',') {
@@ -82,7 +82,7 @@ void Grammar::parse(const std::string &file_path) {
             }
         }
 
-        if (line.size() > 0 && line[0] == 's') {
+        if (!line.empty() && line[0] == 's') {
             line = trim(line);
 
             auto pos = line.find('=');
@@ -96,8 +96,8 @@ void Grammar::parse(const std::string &file_path) {
     in.close();
 }
 
-const std::vector<std::string> &Grammar::getNonterminals() const {
-    return nonterminals;
+const std::vector<std::string> &Grammar::getNonTerminals() const {
+    return nonTerminals;
 }
 
 const std::vector<std::string> &Grammar::getTerminals() const {

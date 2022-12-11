@@ -87,6 +87,8 @@ void Scanner::scan() {
 
     pif.getPifInFile();
     symbolTable.getSymbolTableInFile();
+
+    std::cout << '\n';
 }
 
 std::string Scanner::buildOrRegex(const std::unordered_set<std::string> &elements) const {

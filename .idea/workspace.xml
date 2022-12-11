@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Compiler" targetName="Compiler" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="491ce358-c7a3-4c13-a30f-4deb095d117f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Compiler/Tests/FiniteAutomata/FiniteAutomataTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Compiler/Tests/FiniteAutomata/FiniteAutomataTest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Compiler/Tests/Grammar/GrammarTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Compiler/Tests/Grammar/GrammarTest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Compiler/Tests/Scanner/ScannerTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Compiler/Tests/Scanner/ScannerTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Files/Output/PIF.out" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/Files/Output/PIF.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Files/Output/ST.out" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/Files/Output/ST.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Grammar/Grammar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/Grammar/Grammar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Grammar/Grammar.h" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/Grammar/Grammar.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Scanner/Scanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/Scanner/Scanner.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/cmake-build-debug/Compiler" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/cmake-build-debug/Compiler" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/cmake-build-debug/Compiler.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/cmake-build-debug/Compiler.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="2ImNFIuU6aOKvqROqOiy2Ej1tqa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Informatica\University\UniLanguage\Compiler" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Compiler" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Compiler" TARGET_NAME="Compiler" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Compiler" RUN_TARGET_NAME="Compiler">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="491ce358-c7a3-4c13-a30f-4deb095d117f" name="Default Changelist" comment="" />
+      <created>1670782694033</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670782694033</updated>
+      <workItem from="1670782695243" duration="1828000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

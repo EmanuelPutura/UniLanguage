@@ -7,7 +7,7 @@
 
 class Grammar {
 private:
-    std::vector<std::string> nonterminals;
+    std::vector<std::string> nonTerminals;
     std::vector<std::string> terminals;
     std::vector<Production> productions;
     std::string startingSymbol;
@@ -19,7 +19,7 @@ public:
 
     void parse(const std::string &file_path);
 
-    const std::vector<std::string> &getNonterminals() const;
+    const std::vector<std::string> &getNonTerminals() const;
 
     const std::vector<std::string> &getTerminals() const;
 

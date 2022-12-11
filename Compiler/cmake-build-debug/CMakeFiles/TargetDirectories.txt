@@ -1,3 +1,0 @@
-/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir

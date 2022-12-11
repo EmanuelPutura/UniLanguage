@@ -1,8 +1,6 @@
 Data Structure: Balanced binary search tree, implemented using a red-black tree
-0 -> 2
-1 -> 6
-currentNumber -> 3
-i -> 5
-n -> 4
-sum -> 1
+a -> 1
+b -> 2
+c -> 3
+max -> 4
 
