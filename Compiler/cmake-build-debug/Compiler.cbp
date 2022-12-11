@@ -8,135 +8,147 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug"/>
+				<Option working_dir="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Compiler">
-				<Option output="/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Compiler" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug"/>
+				<Option output="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Compiler.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compiler"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compiler"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Compiler/fast">
-				<Option output="/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Compiler" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug"/>
+				<Option output="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Compiler.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compiler/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/d/Informatica/University/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compiler/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.cpp">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.h">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/FiniteAutomata/FiniteAutomata.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.cpp">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.h">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/FiniteAutomata/Transition/Transition.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Utils/UtilFunctions.cpp">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/Grammar/Grammar.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/FiniteAutomata/Utils/UtilFunctions.h">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/Grammar/Grammar.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.cpp">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/Grammar/Production/Production.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.h">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/Grammar/Production/Production.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/Scanner/Scanner.cpp">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/Scanner/Scanner.h">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/ProgramInternalForm/ProgramInternalForm.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/RedBlackTree/Node.h">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/Scanner/Scanner.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/RedBlackTree/RedBlackTree.cpp">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/Scanner/Scanner.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/RedBlackTree/RedBlackTree.h">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/SymbolTable/RedBlackTree/Node.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/SymbolTable.cpp">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/SymbolTable/RedBlackTree/RedBlackTree.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/SymbolTable.h">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/SymbolTable/RedBlackTree/RedBlackTree.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/Tests/SymbolTableTest.cpp">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/SymbolTable/SymbolTable.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/SymbolTable/Tests/SymbolTableTest.h">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/SymbolTable/SymbolTable.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/main.cpp">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/SymbolTable/Tests/SymbolTableTest.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="/mnt/d/Informatica/University/UniLanguage/Compiler/CMakeLists.txt">
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/SymbolTable/Tests/SymbolTableTest.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/Utils/UtilFunctions.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/Utils/UtilFunctions.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/main.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="D:/Dragos/Work/Faculty/UniLanguage/UniLanguage/Compiler/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

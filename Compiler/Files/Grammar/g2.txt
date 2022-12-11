@@ -1,0 +1,136 @@
+N = 
+	DIGIT
+	NZDIGIT
+	LETTER
+	RELATION
+	DIGITSEQ
+	UINT
+	INT
+	IDENTIFIER
+	TYPE1
+	TYPE
+	DECLARATION
+	DECLLIST
+	EXPRESSION
+	FACTOR
+	IOSTMT
+	CONDITION
+	ELSEIFSTMT
+	IFSTMT
+	WHILESTMT
+	STRUCTSTMT
+	ASSIGNMENT
+	SIMPLESTMT
+	STMT
+	PROGRAM
+
+T = 
+	a
+	b
+	c
+	d
+	e
+	f
+	g
+	h
+	i
+	j
+	k
+	l
+	m
+	n
+	o
+	p
+	q
+	r
+	s
+	t
+	u
+	v
+	w
+	x
+	y
+	z
+	0
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	9
+	"
+	'
+	[
+	]
+	{
+	}
+	(
+	)
+	:
+	;
+	,
+	<
+	>
+	<=
+	>=
+	+ 
+	- 
+	* 
+	/ 
+	% 
+	= 
+	< 
+	<= 
+	== 
+	> 
+	>= 
+	!= 
+	!
+	let
+	and
+	or
+	in
+	if
+	else
+	switch
+	do
+	while
+	for
+	read
+	print
+
+P = 
+	DIGIT -> 0|1|2|3|4|5|6|7|8|9
+	NZDIGIT -> 1|2|3|4|5|6|7|8|9
+	LETTER -> a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z
+	RELATION -> <|<=|==|!=|>=|>
+	DIGITSEQ -> DIGIT|DIGITSEQ
+	UINT -> 0|NZDIGIT|NZDIGIT$DIGITSEQ
+	INT -> 0|NZDIGIT|NZDIGIT$DIGITSEQ|-$NZDIGIT$DIGITSEQ
+	CHAR -> LETTER|DIGIT|_|{}
+	STRING -> ""|CHAR|STRING
+	IDENTIFIER -> LETTER|_$LETTER|LETTER,DIGITSEQ|IDENTIFIER
+	IDENTIFIERLIST -> IDENTIFIER|IDENTIFIER$,$IDENTIFIERLIST
+	TYPE1 -> bool|char|int|double|uint
+	ARRAYDECL -> vec$($UINT$;$TYPE1$)
+	TYPE -> TYPE1|ARRAYDECL
+	DECLARATION -> let$IDENTIFIER$:$TYPE
+	DECLLIST -> DECLARATION|DECLARATION$;$DECLLIST
+	EXPRESSION -> EXPRESSION$+$TERM|EXPRESSION$-$TERM|TERM
+	TERM -> TERM$*$FACTOR|TERM$/$FACTOR|TERM$%$FACTOR|FACTOR
+	FACTOR -> ($EXPRESSION$)|IDENTIFIER
+	IOSTMT -> read$($IDENTIFIER$)$|print$($IDENTIFIER$,$IDENTIFIERLIST$)|print$($STRING$,$IDENTIFIERLIST$)
+	CONDITION -> EXPRESSION$RELATION$EXPRESSION
+	ELSEIFSTMT -> else if${$STMT$}|else if${$STMT$}$ELSEIFSTMT
+	IFSTMT -> if$condition${$STMT$}|if$condition${$STMT$}$else${$STMT$}|if$condition${$STMT$}$ELSEIFSTMT$else${$STMT$}
+	WHILESTMT -> while$CONDITION${$STMT$}
+	STRUCTSTMT -> IFSTMT|WHILESTMT
+	ASSIGNMENT -> IDENTIFIER$=$EXPRESSION
+	SIMPLESTMT -> ASSIGNMENT|IOSTMT
+	STMT -> SIMPLESTMT|STRUCTSTMT
+	PROGRAM -> STMT|STMT$;$PROGRAM
+
+s = PROGRAM

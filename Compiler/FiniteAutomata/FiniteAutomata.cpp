@@ -3,7 +3,7 @@
 //
 
 #include "FiniteAutomata.h"
-#include "Utils/UtilFunctions.h"
+#include "../Utils/UtilFunctions.h"
 
 #include <fstream>
 #include <vector>
