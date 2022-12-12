@@ -47,7 +47,14 @@ void GrammarTest::test() {
             case 3:
                 std::cout << "Productions:\n";
                 for (const auto& element: grammar.getProductions()) {
-                    std::cout << element.toString() << '\n';
+                    std::cout << element.getSource() << " -> ";
+
+                    for (const auto& dest : element.getDestinations()) {
+                        for (const auto& symbol : dest) {
+                            std::cout << symbol << ' ';
+                        }
+                    }
+                    std::cout << '\n';
                 }
                 std::cout << '\n';
                 break;

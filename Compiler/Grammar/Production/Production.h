@@ -17,6 +17,6 @@ public:
 
     const std::string& getSource() const;
 
-    const std::vector<std::string>& getDestinations() const;
+    std::vector<std::vector<std::string>> getDestinations() const;
 };
 
