@@ -6,6 +6,7 @@
 #define COMPILER_RECURSIVEPARSER_H
 
 #include "LanguageSymbol/LanguageSymbol.h"
+#include "../Grammar/Grammar.h"
 
 #include <stack>
 #include <memory>
@@ -21,6 +22,7 @@ class RecursiveParser {
 private:
     RecursiveParserState state;
     int inputIndex;
+    Grammar grammar;
 
     std::stack<std::unique_ptr<LanguageSymbol>> workingStack;
     std::stack<std::unique_ptr<LanguageSymbol>> inputStack;

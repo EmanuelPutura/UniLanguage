@@ -18,5 +18,6 @@ public:
     const std::string& getSource() const;
 
     std::vector<std::vector<std::string>> getDestinations() const;
+    const std::vector<std::string>& getDestinationsRaw() const;
 };
 

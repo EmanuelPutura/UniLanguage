@@ -46,3 +46,7 @@ std::vector<std::vector<std::string>> Production::getDestinations() const {
 bool operator<(const Production &el, const Production &other) {
     return el.toString() < other.toString();
 }
+
+const std::vector<std::string> &Production::getDestinationsRaw() const {
+    return destinations;
+}

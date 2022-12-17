@@ -15,3 +15,7 @@ const std::string &LanguageSymbol::getSymbol() const {
 int LanguageSymbol::getProductionIndex() const {
     return productionIndex;
 }
+
+LanguageSymbol::~LanguageSymbol() {
+
+}
