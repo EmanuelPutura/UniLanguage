@@ -7,8 +7,10 @@
 
 #include "../LanguageSymbol.h"
 
-class NonTerminalSymbol : LanguageSymbol {
+class NonTerminalSymbol : public LanguageSymbol {
 public:
+    explicit NonTerminalSymbol(std::string symbol);
+
     bool isTerminalSymbol() const final;
 };
 

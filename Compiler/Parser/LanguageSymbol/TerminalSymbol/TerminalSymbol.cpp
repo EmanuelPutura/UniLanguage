@@ -7,3 +7,7 @@
 bool TerminalSymbol::isTerminalSymbol() const {
     return true;
 }
+
+TerminalSymbol::TerminalSymbol(std::string symbol) : LanguageSymbol(symbol) {
+
+}

@@ -10,6 +10,7 @@
 class LanguageSymbol {
 public:
     explicit LanguageSymbol(std::string symbol);
+    virtual ~LanguageSymbol();
 
     const std::string& getSymbol() const;
     int getProductionIndex() const;

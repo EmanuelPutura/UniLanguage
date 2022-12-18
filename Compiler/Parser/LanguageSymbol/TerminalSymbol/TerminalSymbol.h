@@ -9,6 +9,8 @@
 
 class TerminalSymbol : public LanguageSymbol {
 public:
+    explicit TerminalSymbol(std::string symbol);
+
     bool isTerminalSymbol() const final ;
 };
 
