@@ -10,7 +10,7 @@ T =
     e
 
 P = 
-    S -> b,S,e|H
-    H -> c,H,d|cd
+    S -> b$S$e|H
+    H -> c$H$d|c$d
 
 s = S

@@ -2,15 +2,15 @@
 // Created by Emanuel on 12.12.2022.
 //
 
-#ifndef COMPILER_LANGUAGESYMBOL_H
-#define COMPILER_LANGUAGESYMBOL_H
+#ifndef COMPILER_PARSERLANGUAGESYMBOL_H
+#define COMPILER_PARSERLANGUAGESYMBOL_H
 
 #include <string>
 
-class LanguageSymbol {
+class ParserLanguageSymbol {
 public:
-    explicit LanguageSymbol(std::string symbol);
-    virtual ~LanguageSymbol();
+    explicit ParserLanguageSymbol(std::string symbol);
+    virtual ~ParserLanguageSymbol() = default;
 
     const std::string& getSymbol() const;
     int getProductionIndex() const;
@@ -22,4 +22,4 @@ protected:
 };
 
 
-#endif //COMPILER_LANGUAGESYMBOL_H
+#endif //COMPILER_PARSERLANGUAGESYMBOL_H

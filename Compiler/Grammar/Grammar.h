@@ -2,14 +2,16 @@
 
 #include <string>
 #include <vector>
+#include <unordered_set>
+#include <unordered_map>
 
 #include "Production/Production.h"
 
 class Grammar {
 private:
-    std::vector<std::string> nonTerminals;
-    std::vector<std::string> terminals;
-    std::vector<Production> productions;
+    std::unordered_set<std::string> nonTerminals;
+    std::unordered_set<std::string> terminals;
+    std::unordered_map<std::string, Production> productions;
     std::string startingSymbol;
     bool isCFG = true;
 public:
@@ -19,11 +21,13 @@ public:
 
     void parse(const std::string &file_path);
 
-    const std::vector<std::string> &getNonTerminals() const;
+    const std::unordered_set<std::string> &getNonTerminals() const;
 
-    const std::vector<std::string> &getTerminals() const;
+    const std::unordered_set<std::string> &getTerminals() const;
 
-    const std::vector<Production> &getProductions() const;
+    const std::unordered_map<std::string, Production> &getProductions() const;
+
+    std::vector<std::vector<std::string>> getDestinationsForSource(const std::string& source) const;
 
     const std::string &getStartingSymbol() const;
 

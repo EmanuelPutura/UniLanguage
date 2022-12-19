@@ -5,7 +5,7 @@
 #ifndef COMPILER_RECURSIVEPARSER_H
 #define COMPILER_RECURSIVEPARSER_H
 
-#include "LanguageSymbol/LanguageSymbol.h"
+#include "LanguageSymbol/ParserLanguageSymbol.h"
 #include "../Grammar/Grammar.h"
 
 #include <stack>
@@ -24,10 +24,10 @@ private:
     int inputIndex;
     Grammar grammar;
 
-    std::stack<std::unique_ptr<LanguageSymbol>> workingStack;
-    std::stack<std::unique_ptr<LanguageSymbol>> inputStack;
+    std::stack<std::unique_ptr<ParserLanguageSymbol>> workingStack;
+    std::stack<std::unique_ptr<ParserLanguageSymbol>> inputStack;
 public:
-    RecursiveParser();
+    explicit RecursiveParser(const std::string& grammarFilePath);
 private:
     void expand();
 

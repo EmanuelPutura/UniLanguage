@@ -18,7 +18,7 @@ void GrammarTest::printMenu() {
 
 void GrammarTest::test() {
     Grammar grammar;
-    grammar.parse("../Files/Grammar/g2.txt");
+    grammar.parse("../Files/Grammar/g1.txt");
 
     while (true) {
         printMenu();
@@ -47,12 +47,14 @@ void GrammarTest::test() {
             case 3:
                 std::cout << "Productions:\n";
                 for (const auto& element: grammar.getProductions()) {
-                    std::cout << element.getSource() << " -> ";
+                    std::cout << element.first << " -> ";
 
-                    for (const auto& dest : element.getDestinations()) {
+                    for (const auto& dest : element.second.getDestinations()) {
                         for (const auto& symbol : dest) {
                             std::cout << symbol << ' ';
                         }
+
+                        std::cout << "| ";
                     }
                     std::cout << '\n';
                 }

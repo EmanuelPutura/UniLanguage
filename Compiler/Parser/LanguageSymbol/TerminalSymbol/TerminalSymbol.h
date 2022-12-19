@@ -5,9 +5,9 @@
 #ifndef COMPILER_TERMINALSYMBOL_H
 #define COMPILER_TERMINALSYMBOL_H
 
-#include "../LanguageSymbol.h"
+#include "../ParserLanguageSymbol.h"
 
-class TerminalSymbol : public LanguageSymbol {
+class TerminalSymbol : public ParserLanguageSymbol {
 public:
     explicit TerminalSymbol(std::string symbol);
 

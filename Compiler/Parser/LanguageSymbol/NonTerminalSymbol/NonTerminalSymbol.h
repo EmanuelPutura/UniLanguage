@@ -5,9 +5,9 @@
 #ifndef COMPILER_NONTERMINALSYMBOL_H
 #define COMPILER_NONTERMINALSYMBOL_H
 
-#include "../LanguageSymbol.h"
+#include "../ParserLanguageSymbol.h"
 
-class NonTerminalSymbol : public LanguageSymbol {
+class NonTerminalSymbol : public ParserLanguageSymbol {
 public:
     explicit NonTerminalSymbol(std::string symbol);
 

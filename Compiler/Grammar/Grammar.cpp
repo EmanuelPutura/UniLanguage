@@ -6,7 +6,7 @@
 
 #include "../Utils/UtilFunctions.h"
 
-Production get_production_from_str(const std::string &input) {
+Production getProductionFromStr(const std::string &input) {
     auto trim_input = trim(input);
 
     auto pos = input.find("->");
@@ -42,7 +42,7 @@ void Grammar::parse(const std::string &file_path) {
                     line.pop_back();
                 }
 
-                nonTerminals.push_back(line);
+                nonTerminals.insert(line);
             }
         }
 
@@ -57,7 +57,7 @@ void Grammar::parse(const std::string &file_path) {
                     line.pop_back();
                 }
 
-                terminals.push_back(line);
+                terminals.insert(line);
             }
         }
 
@@ -72,13 +72,13 @@ void Grammar::parse(const std::string &file_path) {
                     line.pop_back();
                 }
 
-                Production production = get_production_from_str(line);
+                Production production = getProductionFromStr(line);
 
                 if (production.getSource().find('$') != std::string::npos) {
                     isCFG = false;
                 }
 
-                productions.push_back(production);
+                productions.insert({production.getSource(), production});
             }
         }
 
@@ -96,15 +96,15 @@ void Grammar::parse(const std::string &file_path) {
     in.close();
 }
 
-const std::vector<std::string> &Grammar::getNonTerminals() const {
+const std::unordered_set<std::string> &Grammar::getNonTerminals() const {
     return nonTerminals;
 }
 
-const std::vector<std::string> &Grammar::getTerminals() const {
+const std::unordered_set<std::string> &Grammar::getTerminals() const {
     return terminals;
 }
 
-const std::vector<Production> &Grammar::getProductions() const {
+const std::unordered_map<std::string, Production> &Grammar::getProductions() const {
     return productions;
 }
 
@@ -114,4 +114,13 @@ const std::string &Grammar::getStartingSymbol() const {
 
 bool Grammar::checkCFG() const {
     return isCFG;
+}
+
+std::vector<std::vector<std::string>> Grammar::getDestinationsForSource(const std::string& source) const {
+    auto productionIt = productions.find(source);
+    if (productionIt == productions.end()) {
+        return {};
+    }
+
+    return productionIt->second.getDestinations();
 }
