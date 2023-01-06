@@ -10,6 +10,6 @@ bool NonTerminalSymbol::isTerminalSymbol() const {
     return false;
 }
 
-NonTerminalSymbol::NonTerminalSymbol(std::string symbol) : ParserLanguageSymbol(std::move(symbol)) {
+NonTerminalSymbol::NonTerminalSymbol(std::string symbol, int productionIndex) : ParserLanguageSymbol(std::move(symbol), productionIndex) {
 
 }

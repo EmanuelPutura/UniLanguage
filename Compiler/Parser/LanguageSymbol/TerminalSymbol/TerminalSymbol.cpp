@@ -8,6 +8,6 @@ bool TerminalSymbol::isTerminalSymbol() const {
     return true;
 }
 
-TerminalSymbol::TerminalSymbol(std::string symbol) : ParserLanguageSymbol(symbol) {
+TerminalSymbol::TerminalSymbol(std::string symbol, int productionIndex) : ParserLanguageSymbol(symbol, productionIndex) {
 
 }

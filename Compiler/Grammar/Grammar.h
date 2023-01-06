@@ -29,6 +29,8 @@ public:
 
     std::vector<std::vector<std::string>> getDestinationsForSource(const std::string& source) const;
 
+    std::vector<std::string> getDestinationsForSourceRaw(const std::string& source) const;
+
     const std::string &getStartingSymbol() const;
 
     bool checkCFG() const;

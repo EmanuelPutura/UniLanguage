@@ -1,31 +1,37 @@
-$
-    let number: int;
-    input(number);
+let n : int ;
+input ( n ) ;
 
-    let primeAnswer = "Prime";
-    let nonPrimeAnswer = "NonPrime";
+let p : string ;
+p = " p " ;
 
-    check(number < 2) {
-        output(nonPrimeAnswer);
-        exit;
+let e : string ;
+e = " e " ;
+
+if ( n < 2 ) {
+    output ( e ) ;
+    return ;
+}
+
+if ( n == 2 ) {
+    output ( p ) ;
+    return ;
+}
+
+if ( n % 2 == 0 ) {
+    output ( e ) ;
+    return ;
+}
+
+let d : int ;
+d = 3 ;
+
+while ( d * d <= n ) {
+    if ( n % d == 0 ) {
+        output ( e ) ;
+        return ;
     }
 
-    check(number == 2) {
-        output(primeAnswer);
-        exit;
-    }
+    d = d + 2 ;
+}
 
-    check(number % 2 == 0) {
-        output(nonPrimeAnswer);
-        exit;
-    }
-
-    loop(let d = 3; d * d <= number; d = d + 2) {
-        check (number % d == 0) {
-            output(nonPrimeAnswer);
-            exit;
-        }
-    }
-
-    output(primeAnswer);
-$
+output ( p ) ;

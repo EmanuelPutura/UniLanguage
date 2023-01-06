@@ -2,24 +2,14 @@
 // Created by Emanuel on 12.12.2022.
 //
 
+#include <iostream>
+#include <string_view>
 #include "RecursiveParser.h"
 #include "LanguageSymbol/NonTerminalSymbol/NonTerminalSymbol.h"
 #include "LanguageSymbol/TerminalSymbol/TerminalSymbol.h"
 
-RecursiveParser::RecursiveParser(const std::string& grammarFilePath) : state(NORMAL), inputIndex(0) {
+RecursiveParser::RecursiveParser(const std::string &grammarFilePath) : state(NORMAL), inputIndex(0) {
     grammar.parse(grammarFilePath);
-}
-
-std::pair<bool, std::string> firstSource(const Grammar& grammar, const std::string& destination) {
-    for (const auto& production : grammar.getProductions()) {
-        for (const auto& dest : production.second.getDestinationsRaw()) {
-            if (dest.find(destination) != std::string::npos) {
-                return std::make_pair(true, production.first);
-            }
-        }
-    }
-
-    return std::make_pair(false, "");
 }
 
 void RecursiveParser::success() {
@@ -34,43 +24,65 @@ void RecursiveParser::back() {
 }
 
 void RecursiveParser::anotherTry() {
-    auto inputStackHead = std::move(inputStack.top());
-    inputStack.pop();
-
+    auto workingStackHead = std::move(workingStack.top());
     workingStack.pop();
 
-    auto firstSrc = firstSource(grammar, inputStackHead->getSymbol());
-
-    if (firstSrc.first) {
-        inputStack.push(std::make_unique<NonTerminalSymbol>(firstSrc.second));
-    }
-    else {
+    if (checkNextProductionIndex(workingStackHead->getProductionIndex(), workingStackHead->getSymbol())) {
+        state = RecursiveParserState::NORMAL;
+        insertNextProduction(workingStackHead->getProductionIndex() + 1, workingStackHead->getSymbol());
+        workingStack.push(std::make_unique<NonTerminalSymbol>(workingStackHead->getSymbol(),
+                                                              workingStackHead->getProductionIndex() + 1));
+    } else if (inputIndex == 0 && workingStackHead->getSymbol() == grammar.getStartingSymbol()) {
         state = RecursiveParserState::ERROR;
+    } else {
+        state = RecursiveParserState::BACK;
+        inputStack.push(std::move(std::make_unique<NonTerminalSymbol>(workingStackHead->getSymbol(), 1)));
+    }
+}
+
+bool RecursiveParser::checkNextProductionIndex(int productionIndex, const std::string &src) {
+    auto destinations = grammar.getDestinationsForSource(src);
+
+    if (productionIndex > destinations.size()) {
+        inputStack.pop();
+        return false;
+    }
+
+    for (auto el: destinations[productionIndex - 1]) {
+        inputStack.pop();
+    }
+
+    if (productionIndex == destinations.size()) {
+        return false;
+    }
+
+    return true;
+}
+
+void RecursiveParser::insertNextProduction(int productionIndex, const std::string &src) {
+    auto destinations = grammar.getDestinationsForSource(src);
+
+    for (int i = destinations[productionIndex - 1].size() - 1; i >= 0; --i) {
+        if (grammar.getTerminals().contains(destinations[productionIndex - 1][i])) {
+            inputStack.push(std::make_unique<TerminalSymbol>(destinations[productionIndex - 1][i], 1));
+        } else {
+            inputStack.push(std::make_unique<NonTerminalSymbol>(destinations[productionIndex - 1][i], 1));
+        }
     }
 }
 
 void RecursiveParser::expand() {
-    if (inputStack.top()->isTerminalSymbol()) {
-        // TODO: handle this case
-        return;
-    }
-
     auto top = std::move(inputStack.top());
     inputStack.pop();
 
     auto allDestinations = grammar.getDestinationsForSource(top->getSymbol());
-    if (allDestinations.empty()) {
-        // TODO: handle this case
-        return;
-    }
 
     auto firstDestination = allDestinations.front();
-    for (size_t i = firstDestination.size() - 1; i >= 0; --i) {
+    for (int i = firstDestination.size() - 1; i >= 0; --i) {
         if (grammar.getTerminals().contains(firstDestination[i])) {
-            inputStack.push(std::make_unique<TerminalSymbol>(firstDestination[i]));
-        }
-        else {
-            inputStack.push(std::make_unique<NonTerminalSymbol>(firstDestination[i]));
+            inputStack.push(std::make_unique<TerminalSymbol>(firstDestination[i], 1));
+        } else {
+            inputStack.push(std::make_unique<NonTerminalSymbol>(firstDestination[i], 1));
         }
     }
 
@@ -78,21 +90,76 @@ void RecursiveParser::expand() {
 }
 
 void RecursiveParser::advance() {
-    if (!inputStack.top()->isTerminalSymbol() || inputStack.top()->getProductionIndex() != inputIndex) {
-        // TODO: handle this case
-        return;
-    }
-
     inputIndex++;
     workingStack.push(std::move(inputStack.top()));
     inputStack.pop();
 }
 
 void RecursiveParser::momentaryInsuccess() {
-    if (!inputStack.top()->isTerminalSymbol() || inputStack.top()->getProductionIndex() == inputIndex) {
-        // TODO: handle this case
+    state = BACK;
+}
+
+void traverseStack(std::stack<std::unique_ptr<ParserLanguageSymbol>> &stack) {
+    if (stack.empty()) {
         return;
     }
 
-    state = BACK;
+    auto t = std::move(stack.top());
+    std::cout << t->getSymbol() << " ";
+    stack.pop();
+    traverseStack(stack);
+    stack.push(std::move(t));
 }
+
+bool RecursiveParser::parse(const std::vector<std::string> &inputSequence) {
+    state = RecursiveParserState::NORMAL;
+    inputIndex = 0;
+    workingStack = std::stack<std::unique_ptr<ParserLanguageSymbol>>();
+    inputStack = std::stack<std::unique_ptr<ParserLanguageSymbol>>();
+    inputStack.push(std::make_unique<NonTerminalSymbol>(grammar.getStartingSymbol(), 1));
+    int index = 0;
+
+    while (state != RecursiveParserState::FINAL && state != RecursiveParserState::ERROR) {
+        index += 1;
+//        if (index > 2020000) {
+//            std::cout << "Index: " << index << '\n';
+//            std::cout << "Working stack: ";
+//            traverseStack(workingStack);
+//
+//            std::cout << "\nInput stack: ";
+//            traverseStack(inputStack);
+//            std::cout << "\n\n";
+//        }
+
+        if (state == RecursiveParserState::NORMAL) {
+            if (inputIndex == inputSequence.size() && inputStack.empty()) {
+                success();
+            } else {
+                if (!inputStack.empty() && !inputStack.top()->isTerminalSymbol()) {
+                    expand();
+                } else {
+                    if (inputIndex < inputSequence.size() && !inputStack.empty() &&
+                        inputStack.top()->getSymbol() == inputSequence[inputIndex]) {
+                        advance();
+                    } else {
+                        momentaryInsuccess();
+                    }
+                }
+            }
+        } else {
+            if (workingStack.top()->isTerminalSymbol()) {
+                back();
+            } else {
+                anotherTry();
+            }
+        }
+    }
+
+    if (state == RecursiveParserState::ERROR) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+

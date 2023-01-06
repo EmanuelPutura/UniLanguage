@@ -11,4 +11,4 @@ add_executable(Compiler main.cpp SymbolTable/RedBlackTree/RedBlackTree.cpp Symbo
         Tests/FiniteAutomata/FiniteAutomataTest.cpp Tests/FiniteAutomata/FiniteAutomataTest.h Tests/Grammar/GrammarTest.cpp Tests/Grammar/GrammarTest.h 
         Tests/Scanner/ScannerTest.cpp Tests/Scanner/ScannerTest.h Parser/RecursiveParser.cpp Parser/RecursiveParser.h Parser/LanguageSymbol/ParserLanguageSymbol.cpp
         Parser/LanguageSymbol/ParserLanguageSymbol.h Parser/LanguageSymbol/TerminalSymbol/TerminalSymbol.cpp Parser/LanguageSymbol/TerminalSymbol/TerminalSymbol.h
-        Parser/LanguageSymbol/NonTerminalSymbol/NonTerminalSymbol.cpp Parser/LanguageSymbol/NonTerminalSymbol/NonTerminalSymbol.h)
+        Parser/LanguageSymbol/NonTerminalSymbol/NonTerminalSymbol.cpp Parser/LanguageSymbol/NonTerminalSymbol/NonTerminalSymbol.h Tests/Parser/ParserTest.cpp Tests/Parser/ParserTest.h)

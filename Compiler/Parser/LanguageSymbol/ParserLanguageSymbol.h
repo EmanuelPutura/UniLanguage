@@ -9,8 +9,10 @@
 
 class ParserLanguageSymbol {
 public:
-    explicit ParserLanguageSymbol(std::string symbol);
+    explicit ParserLanguageSymbol(std::string symbol, int productionIndex);
     virtual ~ParserLanguageSymbol() = default;
+
+    void setProductionIndex(int newProductionIndex);
 
     const std::string& getSymbol() const;
     int getProductionIndex() const;

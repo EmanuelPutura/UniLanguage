@@ -38,10 +38,6 @@ void Grammar::parse(const std::string &file_path) {
                 if (line.empty())
                     break;
 
-                if (line[line.size() - 1] == ',') {
-                    line.pop_back();
-                }
-
                 nonTerminals.insert(line);
             }
         }
@@ -53,10 +49,6 @@ void Grammar::parse(const std::string &file_path) {
                 if (line.empty())
                     break;
 
-                if (line[line.size() - 1] == ',') {
-                    line.pop_back();
-                }
-
                 terminals.insert(line);
             }
         }
@@ -67,10 +59,6 @@ void Grammar::parse(const std::string &file_path) {
 
                 if (line.empty())
                     break;
-
-                if (line[line.size() - 1] == ',') {
-                    line.pop_back();
-                }
 
                 Production production = getProductionFromStr(line);
 
@@ -123,4 +111,13 @@ std::vector<std::vector<std::string>> Grammar::getDestinationsForSource(const st
     }
 
     return productionIt->second.getDestinations();
+}
+
+std::vector<std::string> Grammar::getDestinationsForSourceRaw(const std::string &source) const {
+    auto productionIt = productions.find(source);
+    if (productionIt == productions.end()) {
+        return {};
+    }
+
+    return productionIt->second.getDestinationsRaw();
 }
