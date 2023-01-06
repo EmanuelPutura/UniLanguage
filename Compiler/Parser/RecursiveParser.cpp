@@ -121,7 +121,7 @@ bool RecursiveParser::parse(const std::vector<std::string> &inputSequence) {
 
     while (state != RecursiveParserState::FINAL && state != RecursiveParserState::ERROR) {
         index += 1;
-//        if (index > 2020000) {
+//        if (index > 1) {
 //            std::cout << "Index: " << index << '\n';
 //            std::cout << "Working stack: ";
 //            traverseStack(workingStack);

@@ -1,37 +1,37 @@
-let n : int ;
-input ( n ) ;
+let n: int;
+input(n);
 
-let p : string ;
-p = " p " ;
+let prime: string;
+prime = "Prime";
 
-let e : string ;
-e = " e " ;
+let nonPrime: string;
+nonPrime = "Non_prime";
 
 if ( n < 2 ) {
-    output ( e ) ;
-    return ;
+    output(nonPrime);
+    return;
 }
 
 if ( n == 2 ) {
-    output ( p ) ;
-    return ;
+    output(prime);
+    return;
 }
 
 if ( n % 2 == 0 ) {
-    output ( e ) ;
-    return ;
+    output(nonPrime);
+    return;
 }
 
-let d : int ;
-d = 3 ;
+let d: int;
+d = 3;
 
 while ( d * d <= n ) {
     if ( n % d == 0 ) {
-        output ( e ) ;
-        return ;
+        output(nonPrime);
+        return;
     }
 
-    d = d + 2 ;
+    d = d + 2;
 }
 
-output ( p ) ;
+output(prime);

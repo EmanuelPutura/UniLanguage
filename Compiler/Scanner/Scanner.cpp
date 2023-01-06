@@ -204,7 +204,7 @@ TokenType Scanner::identifyToken(const std::string &token, int lineNumber) const
         return SEPARATOR;
     }
 
-    std::regex identifierRegex ("^([a-zA-Z])[a-zA-Z0-9]*$");
+    std::regex identifierRegex ("^([a-zA-Z_])[a-zA-Z0-9_]*$");
 
 //    if (std::regex_match(token, identifierRegex)) {
 //        return IDENTIFIER;
@@ -219,7 +219,7 @@ TokenType Scanner::identifyToken(const std::string &token, int lineNumber) const
     std::regex integerConstRegex ("^[1-9][0-9]*|0$");
 
     std::regex characterConstRegex("^\'[a-zA-Z0-9]?\'$");
-    std::regex stringConstRegex("^\"[a-zA-Z0-9]*\"$");
+    std::regex stringConstRegex("^\"[a-zA-Z0-9_]*\"$");
 
 //    if (std::regex_match(token, negativeIntegerConstRegex) || std::regex_match(token, positiveIntegerConstRegex) || std::regex_match(token, integerConstRegex) ||
 //            std::regex_match(token, characterConstRegex) || std::regex_match(token, stringConstRegex)) {

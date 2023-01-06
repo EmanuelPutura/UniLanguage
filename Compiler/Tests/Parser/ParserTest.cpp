@@ -4,22 +4,26 @@
 
 #include "ParserTest.h"
 #include "../../Parser/RecursiveParser.h"
+#include "../../Scanner/Scanner.h"
 
 #include <iostream>
 #include <sstream>
 #include <fstream>
 
-std::vector<std::string> getInputSequenceFromString(const std::string &inputString) {
-    std::istringstream ss(inputString);
+std::pair<std::string, int> splitPifLine(const std::string &line) {
+    std::stringstream lineSs(line);
 
-    std::string symbol;
-    std::vector<std::string> inputSequence;
+    std::string current;
+    std::vector<std::string> parts;
 
-    while (std::getline(ss, symbol, ' ')) {
-        inputSequence.push_back(symbol);
+    while (std::getline(lineSs, current, ' ')) {
+        if (current == "->") {
+            continue;
+        }
+        parts.push_back(current);
     }
 
-    return inputSequence;
+    return std::make_pair(parts[0], std::stoi(parts[1]));
 }
 
 void ParserTest::printMenu() {
@@ -29,9 +33,10 @@ void ParserTest::printMenu() {
 
 void ParserTest::test() {
     RecursiveParser parser("../Files/Grammar/g2.txt");
+    Scanner scanner("../Files/Programs/p1.txt", "../Files/LanguageSpecification/tokens.in");
+    scanner.scan();
     std::ifstream file;
 
-    std::string inputString;
     std::vector<std::string> inputSequence;
     bool res;
     std::string line;
@@ -43,26 +48,23 @@ void ParserTest::test() {
         std::cout << ">> ";
         std::cin >> command;
 
-        //std::cin.get();
-
         switch (command) {
             case 0:
                 return;
             case 1:
                 inputSequence.clear();
-                inputString = "";
-                file.open("../Files/Programs/p2.txt");
 
-                //std::getline(std::cin, inputString);
+                file.open("../Files/Output/PIF.out");
 
                 while (std::getline(file, line)) {
                     if (line.empty()) {
                         continue;
                     }
-                    inputString += line + " ";
-                }
 
-                inputSequence = getInputSequenceFromString(inputString);
+                    auto linePair = splitPifLine(line);
+
+                    inputSequence.push_back(linePair.first);
+                }
 
                 for (size_t i = 0; i < inputSequence.size(); ++i) {
                     if (inputSequence[i].empty()) {
