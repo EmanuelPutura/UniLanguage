@@ -1,19 +1,19 @@
-let a : int ;
-input ( a ) ;
+let a: int;
+input(a);
 
-let b : int ;
-input ( b ) ;
+let b: int;
+input(b);
 
-let c : int ;
-input ( c ) ;
+let c: int;
+input(c);
 
-let m : int ;
-m = a ;
+let max: int;
+max = a;
 
 if ( b > a ) {
-    m = b ;
+    max = b;
 }
 
 if ( c > m ) {
-    m = c ;
+    max = c;
 }

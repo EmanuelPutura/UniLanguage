@@ -3,15 +3,14 @@ let
 int
 string
 char
-array
+vec
 const
 input
 output
-check
+if
 else
-loop
 while
-exit
+return
 OPERATORS
 +
 -
@@ -29,7 +28,6 @@ OPERATORS
 and
 or
 SEPARATORS
-$
 (
 )
 [

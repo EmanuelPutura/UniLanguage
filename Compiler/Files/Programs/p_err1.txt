@@ -1,22 +1,21 @@
-$
-    let a: 1int;
-    input(a);
+let a : 1int ;
+input ( a ) ;
 
-    let b: int;
-    input(b);
+let b : int ;
+input ( b ) ;
 
-    let c: int;
-    input(c);
+let c : int ;
+input ( c ) ;
 
-    let max = a;
+let m : int ;
+m = a ;
 
-    check(b ~ a) {
-        max = b;
-    }
+if ( b ~ a ) {
+    m = b ;
+}
 
-    check(c > max) {
-        max = c;
-    }
+if ( c > m ) {
+    m = c ;
+}
 
-    output(max);
-$
+output ( m ) ;

@@ -2,5 +2,6 @@ Data Structure: Balanced binary search tree, implemented using a red-black tree
 a -> 1
 b -> 2
 c -> 3
+m -> 5
 max -> 4
 

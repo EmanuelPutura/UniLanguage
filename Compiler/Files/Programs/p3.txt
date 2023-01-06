@@ -1,17 +1,17 @@
-let s : int ;
-s = 0 ;
-let c : int ;
+let sum: int;
+sum = 0;
+let c: int;
 
-let n : int ;
-input ( n ) ;
+let n: int;
+input(n);
 
-let i : int ;
-i = 0 ;
+let i: int;
+i = 0;
 
 while ( i < n ) {
-    input ( c ) ;
-    s = s + c ;
-    i = i + 1 ;
+    input(c);
+    sum = sum + c;
+    i = i + 1;
 }
 
-output ( s ) ;
+output(sum);
