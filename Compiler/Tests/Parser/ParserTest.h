@@ -7,7 +7,11 @@
 
 
 class ParserTest {
+private:
+    static void printMenu();
 
+public:
+    static void test();
 };
 
 

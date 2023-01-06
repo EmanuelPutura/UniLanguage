@@ -9,7 +9,7 @@
 
 class TerminalSymbol : public ParserLanguageSymbol {
 public:
-    explicit TerminalSymbol(std::string symbol);
+    explicit TerminalSymbol(std::string symbol, int productionIndex);
 
     bool isTerminalSymbol() const final ;
 };

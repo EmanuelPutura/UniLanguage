@@ -1,14 +1,17 @@
-$
-    let sum = 0;
-    let currentNumber: int;
+let s : int ;
+s = 0 ;
+let c : int ;
 
-    let n: int;
-    input(n);
+let n : int ;
+input ( n ) ;
 
-    loop(let i = 0; i<n; i=i+1) {
-        input(currentNumber);
-        sum = sum + currentNumber;
-    }
+let i : int ;
+i = 0 ;
 
-    output(sum);
-$
+while ( i < n ) {
+    input ( c ) ;
+    s = s + c ;
+    i = i + 1 ;
+}
+
+output ( s ) ;

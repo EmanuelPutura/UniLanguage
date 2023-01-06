@@ -27,7 +27,10 @@ private:
     std::stack<std::unique_ptr<ParserLanguageSymbol>> workingStack;
     std::stack<std::unique_ptr<ParserLanguageSymbol>> inputStack;
 public:
-    explicit RecursiveParser(const std::string& grammarFilePath);
+    explicit RecursiveParser(const std::string &grammarFilePath);
+
+    bool parse(const std::vector<std::string> &inputSequence);
+
 private:
     void expand();
 
@@ -40,6 +43,10 @@ private:
     void anotherTry();
 
     void success();
+
+    bool checkNextProductionIndex(int productionIndex, const std::string& src);
+
+    void insertNextProduction(int productionIndex, const std::string& src);
 };
 
 

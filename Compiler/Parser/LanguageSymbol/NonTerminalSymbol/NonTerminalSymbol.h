@@ -9,7 +9,7 @@
 
 class NonTerminalSymbol : public ParserLanguageSymbol {
 public:
-    explicit NonTerminalSymbol(std::string symbol);
+    explicit NonTerminalSymbol(std::string symbol, int productionIndex);
 
     bool isTerminalSymbol() const final;
 };
