@@ -8,6 +8,21 @@
 #include "LanguageSymbol/NonTerminalSymbol/NonTerminalSymbol.h"
 #include "LanguageSymbol/TerminalSymbol/TerminalSymbol.h"
 
+namespace {
+    std::stack<std::unique_ptr<ParserLanguageSymbol>> reverseStack(std::stack<std::unique_ptr<ParserLanguageSymbol>>& stack) {
+        std::stack<std::unique_ptr<ParserLanguageSymbol>> result;
+
+        while (!stack.empty()) {
+            result.push(std::move(stack.top()));
+            stack.pop();
+        }
+
+        return result;
+    }
+} // anonymous namespace
+
+RecursiveParserLogicError::RecursiveParserLogicError(const std::string &message) : logic_error(message) {}
+
 RecursiveParser::RecursiveParser(const std::string &grammarFilePath) : state(NORMAL), inputIndex(0) {
     grammar.parse(grammarFilePath);
 }
@@ -111,7 +126,7 @@ void traverseStack(std::stack<std::unique_ptr<ParserLanguageSymbol>> &stack) {
     stack.push(std::move(t));
 }
 
-bool RecursiveParser::parse(const std::vector<std::string> &inputSequence) {
+ParserOutput RecursiveParser::parse(const std::vector<std::string> &inputSequence) {
     state = RecursiveParserState::NORMAL;
     inputIndex = 0;
     workingStack = std::stack<std::unique_ptr<ParserLanguageSymbol>>();
@@ -121,15 +136,6 @@ bool RecursiveParser::parse(const std::vector<std::string> &inputSequence) {
 
     while (state != RecursiveParserState::FINAL && state != RecursiveParserState::ERROR) {
         index += 1;
-//        if (index > 1) {
-//            std::cout << "Index: " << index << '\n';
-//            std::cout << "Working stack: ";
-//            traverseStack(workingStack);
-//
-//            std::cout << "\nInput stack: ";
-//            traverseStack(inputStack);
-//            std::cout << "\n\n";
-//        }
 
         if (state == RecursiveParserState::NORMAL) {
             if (inputIndex == inputSequence.size() && inputStack.empty()) {
@@ -156,10 +162,56 @@ bool RecursiveParser::parse(const std::vector<std::string> &inputSequence) {
     }
 
     if (state == RecursiveParserState::ERROR) {
-        return false;
+        auto parsingOutput = ParserOutput();
+        parsingOutput.setInvalidInput();
+
+        return parsingOutput;
     } else {
-        return true;
+        auto parsingTree = createParserTree();
+        return ParserOutput(parsingTree);
     }
 }
 
+ParserTree RecursiveParser::createParserTree() {
+    ParserTree tree;
+    std::stack<std::shared_ptr<ParserTreeNode>> processingStack;
+    auto revWorkingStack = reverseStack(workingStack);
 
+    tree.root = std::make_shared<ParserTreeNode>();
+    tree.root->symbol = revWorkingStack.top()->getSymbol();
+    processingStack.push(tree.root);
+
+    while (!revWorkingStack.empty()) {
+        if (processingStack.empty() || revWorkingStack.top()->getSymbol() != processingStack.top()->symbol) {
+            throw RecursiveParserLogicError("Error while building the parsing tree.");
+        }
+
+        auto node = processingStack.top();
+        processingStack.pop();
+
+        auto parserSymbol = std::move(revWorkingStack.top());
+        revWorkingStack.pop();
+
+        if (!parserSymbol->isTerminalSymbol()) {
+            auto allRightHandSides = grammar.getDestinationsForSource(parserSymbol->getSymbol());
+
+            if (allRightHandSides.size() < parserSymbol->getProductionIndex()) {
+                throw RecursiveParserLogicError("Error while building the parsing tree.");
+            }
+
+            auto currentRightHandSide = allRightHandSides[parserSymbol->getProductionIndex() - 1];
+            int prevNoOfChildren = node->children.size();
+
+            for (int i = 0; i < currentRightHandSide.size(); ++i) {
+                node->children.push_back(std::make_shared<ParserTreeNode>());
+            }
+
+            for (int i = currentRightHandSide.size() - 1; i >= 0; --i) {
+                node->children[prevNoOfChildren + i]->symbol = currentRightHandSide[i];
+                processingStack.push(node->children[prevNoOfChildren + i]);
+            }
+        }
+    }
+
+    return tree;
+}

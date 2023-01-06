@@ -1,16 +1,12 @@
 N = 
     S
-    H
-    M
 
-T = 
+T =
+    a
     b
     c
-    d
-    e
 
-P = 
-    S -> b$S$e|H
-    H -> c$H$d|c$d
+P =
+    S -> a$S$b$S|a$S|c
 
 s = S

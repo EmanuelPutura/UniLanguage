@@ -1,0 +1,10 @@
+          Index              Symbol             Parent Index           Right Sibling Index
+              0                   S                       -1                            -1
+              1                   a                        0                             2
+              2                   S                        0                             3
+              3                   b                        0                             4
+              4                   S                        0                            -1
+              5                   a                        2                             6
+              6                   S                        2                             7
+              7                   c                        4                            -1
+              8                   c                        6                            -1

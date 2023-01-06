@@ -11,7 +11,8 @@ private:
     static void printMenu();
 
 public:
-    static void test();
+    static void testFileContextFreeGrammar();
+    static void testLanguageGrammar();
 };
 
 
