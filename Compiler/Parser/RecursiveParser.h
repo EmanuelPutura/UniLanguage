@@ -7,9 +7,18 @@
 
 #include "LanguageSymbol/ParserLanguageSymbol.h"
 #include "../Grammar/Grammar.h"
+#include "ParserTree.h"
+#include "ParserOutput/ParserOutput.h"
 
 #include <stack>
 #include <memory>
+#include <exception>
+
+
+class RecursiveParserLogicError : public std::logic_error {
+public:
+    explicit RecursiveParserLogicError(const std::string& message);
+};
 
 enum RecursiveParserState {
     NORMAL,
@@ -29,8 +38,7 @@ private:
 public:
     explicit RecursiveParser(const std::string &grammarFilePath);
 
-    bool parse(const std::vector<std::string> &inputSequence);
-
+    ParserOutput parse(const std::vector<std::string> &inputSequence);
 private:
     void expand();
 
@@ -47,6 +55,8 @@ private:
     bool checkNextProductionIndex(int productionIndex, const std::string& src);
 
     void insertNextProduction(int productionIndex, const std::string& src);
+
+    ParserTree createParserTree();
 };
 
 

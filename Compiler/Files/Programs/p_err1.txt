@@ -1,21 +1,21 @@
-let a : 1int ;
-input ( a ) ;
+let a: 1int;
+input(a);
 
-let b : int ;
-input ( b ) ;
+let b: int;
+input(b);
 
-let c : int ;
-input ( c ) ;
+let c: int;
+input(c);
 
-let m : int ;
-m = a ;
+let m: int;
+m = a;
 
 if ( b ~ a ) {
-    m = b ;
+    m = b;
 }
 
 if ( c > m ) {
-    m = c ;
+    m = c;
 }
 
-output ( m ) ;
+output(m);

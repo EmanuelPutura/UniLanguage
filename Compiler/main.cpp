@@ -7,7 +7,9 @@ int main() {
 //    ScannerTest::test();
 //    FiniteAutomataTest::test();
 //    GrammarTest::test();
-    ParserTest::test();
+
+    ParserTest::testLanguageGrammar();
+//    ParserTest::testLanguageGrammar();
 
     return 0;
 }
