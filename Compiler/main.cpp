@@ -8,7 +8,8 @@ int main() {
 //    FiniteAutomataTest::test();
 //    GrammarTest::test();
 
-    ParserTest::testLanguageGrammar();
+    ParserTest::testFileContextFreeGrammar();
+//    ParserTest::testLanguageGrammar();
 //    ParserTest::testLanguageGrammar();
 
     return 0;

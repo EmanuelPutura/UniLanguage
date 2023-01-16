@@ -1,0 +1,21 @@
+let a: 1int;
+input(a);
+
+let b: int;
+input(b);
+
+let c: int;
+input(c);
+
+let m: int;
+m = a;
+
+if ( b ~ a ) {
+    m = b;
+}
+
+if ( c > m ) {
+    m = c;
+}
+
+output(m);

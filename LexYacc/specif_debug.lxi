@@ -1,0 +1,93 @@
+%option noyywrap
+%{
+	#include <stdio.h>
+	#include "y.tab.h"
+	int lines = 0;
+%}
+
+NZERODIGIT [1-9]
+DIGIT      [0-9]
+LETTER     [A-Za-z]
+CHARACTER  ['](LETTER|DIGIT)[']
+STRING     ["][A-Za-z0-9_]+["]
+IDENTIFIER [A-Za-z]|[_A-Za-z][_A-Za-z0-9]+
+
+%%
+
+{DIGIT}|{NZERODIGIT}{DIGIT}*|"-"{NZERODIGIT}{DIGIT}*					{printf("INTEGER\n"); return INTEGER;}
+{CHARACTER}										{printf("CHAR\n"); return CHAR;}
+{STRING}										{printf("STR\n"); return STR;}
+"let"											{printf("LET\n"); return LET;}
+"int"											{printf("INT\n"); return INT;}
+"string"										{printf("STRING\n"); return STRING;}
+"char"											{printf("CHAR\n"); return CHAR;}
+"vec"											{printf("VEC\n"); return VEC;}
+"input"											{printf("INPUT\n"); return INPUT;}
+"output"										{printf("OUTPUT\n"); return OUTPUT;}
+"if"											{printf("IF\n"); return IF;}
+"else"											{printf("ELSE\n"); return ELSE;}
+"while"											{printf("WHILE\n"); return WHILE;}
+"return"										{printf("RETURN\n"); return RETURN;}
+"("											{printf("OPEN_ROUND_BRACKET\n"); return OPEN_ROUND_BRACKET;}
+")"											{printf("CLOSED_ROUND_BRACKET\n"); return CLOSED_ROUND_BRACKET;}
+"["											{printf("OPEN_SQUARE_BRACKET\n"); return OPEN_SQUARE_BRACKET;}
+"]"											{printf("CLOSED_SQUARE_BRACKET\n"); return CLOSED_SQUARE_BRACKET;}
+"{"											{printf("OPEN_BRACE\n"); return OPEN_BRACE;}
+"}"											{printf("CLOSED_BRACE\n"); return CLOSED_BRACE;}
+";"											{printf("SEMICOLON\n"); return SEMICOLON;}
+":"											{printf("COLON\n"); return COLON;}
+","											{printf("COMMA\n"); return COMMA;}							
+"+"											{printf("PLUS\n"); return PLUS;}
+"-"											{printf("MINUS\n"); return MINUS;}
+"*"											{printf("MULTIPLY\n"); return MULTIPLY;}
+"/"											{printf("DIVIDE\n"); return DIVIDE;}
+"%"											{printf("MOD\n"); return MOD;}
+"<="											{printf("RELATION_OP\n"); return RELATION_OP;}
+"=="											{printf("RELATION_OP\n"); return RELATION_OP;}
+">"											{printf("RELATION_OP\n"); return RELATION_OP;}
+">="											{printf("RELATION_OP\n"); return RELATION_OP;}
+"!="											{printf("RELATION_OP\n"); return RELATION_OP;}
+"="											{printf("ASSIGNMENT_OP\n"); return ASSIGNMENT_OP;}
+"<"											{printf("RELATION_OP\n"); return RELATION_OP;}
+"!"											{printf("RELATION_OP\n"); return RELATION_OP;}
+"and"											{printf("RELATION_OP\n"); return RELATION_OP;}
+"or"											{printf("RELATION_OP\n"); return RELATION_OP;}			
+{IDENTIFIER}										{printf("ID\n"); return ID;}
+
+[\n]+											{++lines;}
+[ \t]+											{}
+
+[0-9]{IDENTIFIER}									{ printf("Illegal identifier at line %d: %s\n", lines, yytext); return -1; }
+.											{ printf("Illegal symbol at line %d: %s\n", lines, yytext); return -1; }
+
+%%
+
+/*int main(int argc, char **argv)
+{
+    ++argv;
+    --argc; 
+    
+    if ( argc > 0 ) {
+        yyin = fopen( argv[0], "r" ); 
+    }
+    else {
+        yyin = stdin; 
+    }
+
+    int token;
+    int isOk = 1;
+
+    token = yylex();
+
+    while( token ) {
+        if(token == -1) {
+	    isOk = 0;
+	}
+        token = yylex();
+    }
+
+    if ( isOk ) {
+	printf("SUCCESS\n");
+    }
+    return 0;
+}*/

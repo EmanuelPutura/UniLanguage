@@ -10,10 +10,10 @@ input(c);
 let max: int;
 max = a;
 
-if (b > a) {
+if ( b > a ) {
     max = b;
 }
 
-if (c > m) {
+if ( c > m ) {
     max = c;
 }

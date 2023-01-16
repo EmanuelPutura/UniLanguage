@@ -1,0 +1,37 @@
+let n: int;
+input(n);
+
+let prime: string;
+prime = "Prime";
+
+let nonPrime: string;
+nonPrime = "Non_prime";
+
+if ( n < 2 ) {
+    output(nonPrime);
+    return;
+}
+
+if ( n == 2 ) {
+    output(prime);
+    return;
+}
+
+if ( n % 2 == 0 ) {
+    output(nonPrime);
+    return;
+}
+
+let d: int;
+d = 3;
+
+while ( d * d <= n ) {
+    if ( n % d == 0 ) {
+        output(nonPrime);
+        return;
+    }
+
+    d = d + 2;
+}
+
+output(prime);
